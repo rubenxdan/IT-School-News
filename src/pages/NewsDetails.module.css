@@ -1,0 +1,82 @@
+/* Stilizam html-ul venit de la The Guardian. */
+.newsDetails {
+  text-align: left;
+}
+
+.newsDetails img {
+  width: 100%;
+  height: auto;
+}
+
+.newsDetails a {
+  color: var(--text-secondary);
+}
+
+.newsDetails a:hover {
+  color: var(--text-secondary);
+  text-decoration: underline;
+}
+
+.newsDetails h2,
+.newsDetails h3 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.newsDetails figcaption {
+  font-size: 0.875rem;
+}
+
+/* Selectam iframe-urile care au ca valoare a atributului src un sir ce contine subsirul "youtube". */
+.newsDetails iframe[src*="youtube"] {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.message {
+  flex: 80%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.show {
+  visibility: visible;
+  animation: fadeIn 0.5s, fadeOut 0.5s 2.5s;
+  position: fixed;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+  opacity: 0.8;
+}
+.hide {
+  visibility: hidden;
+}
+
+@keyframes fadeIn {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 0.8;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
